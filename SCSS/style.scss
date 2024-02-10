@@ -1,6 +1,108 @@
  @import './reset';
  @import '../assets/font/font';
 
+ // TODO! Блок Header
+.header {
+    min-height: 65px;
+    background: #000025;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.5rem;
+        &.logo_color-yellow {
+            color: #EDFF7E;
+        }
+    }
+    .navigate__items {
+        display: flex;
+        column-gap: 39px;
+        list-style-type: none;
+        .navigate__item {
+            text-transform: uppercase;
+        }
+        .item__link_modificate {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .item__link_color {
+            color: #EDFF7E;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    .navigate__item:not(:nth-child(4)) .item__link_modificate::after {
+        content: '\00b7'; 
+        display: inline-block;
+        margin-left: 45px; 
+        color: white;  
+    }
+}
+
+            
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  // TODO! Блок Portfolio Grid
  @mixin grid-layout($columns, $column-width, $rows, $row-height) {
@@ -85,6 +187,10 @@
       }
     }
     @media (max-width: 450px) {
+        // TODO! Навигация
+        .navigate {
+            display: none;
+        }
         // TODO! @media Блок Portfolio Grid
       .grid-container {
           @include grid-layout(2, 161px, 6, 161px);
