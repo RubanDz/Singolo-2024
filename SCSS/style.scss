@@ -1,9 +1,7 @@
  @import './reset';
  @import '../assets/font/font';
 
-p {
-    font-size: 2rem;
-}
+
  // TODO! Блок Portfolio Grid
  @mixin grid-layout($columns, $column-width, $rows, $row-height) {
     grid-template-columns: repeat($columns, $column-width);
@@ -46,14 +44,47 @@ p {
     }
 }
 
-@media (max-width: 767px) {
+// TODO!--Блок Footer
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    .text__footer {
+        font-weight: 900;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        color: #5A5A7F;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 830px) {
     // TODO! @media Блок Portfolio Grid
     .grid-container {
         @include grid-layout(3, 220px, 4, 187px);
         gap: 12px;
       }
     }
-    @media (max-width: 375px) {
+    @media (max-width: 450px) {
         // TODO! @media Блок Portfolio Grid
       .grid-container {
           @include grid-layout(2, 161px, 6, 161px);
