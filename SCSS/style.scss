@@ -1,6 +1,9 @@
  @import './reset';
+ @import '../assets/font/font';
 
-
+p {
+    font-size: 2rem;
+}
  // TODO! Блок Portfolio Grid
  @mixin grid-layout($columns, $column-width, $rows, $row-height) {
     grid-template-columns: repeat($columns, $column-width);
@@ -17,14 +20,41 @@
         object-fit: cover;
     }
 }
-   
+
+//TODO!--Блок Button
+.button {
+    width: 81px;
+    height: 28px;
+    padding: 8px;
+    border: 1px solid #7067CF;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    background-color: white;
+    color: #5A5A7F;
+    cursor: pointer;
+}
+.button_color {
+    color: white;
+    background-color: #7067CF;
+    &:hover {
+        background-color: #8f89ce;
+    }
+    &:active {
+        background-color: #aeabd2;
+    }
+}
+
 @media (max-width: 767px) {
+    // TODO! @media Блок Portfolio Grid
     .grid-container {
         @include grid-layout(3, 220px, 4, 187px);
         gap: 12px;
       }
     }
     @media (max-width: 375px) {
+        // TODO! @media Блок Portfolio Grid
       .grid-container {
           @include grid-layout(2, 161px, 6, 161px);
           gap: 13px;
@@ -32,3 +62,10 @@
     }
  
       
+
+    
+  
+        
+   
+    
+    
