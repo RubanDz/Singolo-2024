@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,87 +7,229 @@
     <title>Singolo</title>
 </head>
 <body>
+
+    <!--TODO! БЛОК HEADER-->
     <header class="header">
         <div class="logo">singolo<span class="logo logo_color-yellow">*</span></div>
-        <div class="navigate">
+        <nav class="navigate">
             <ul class="navigate__items">
                 <li class="navigate__item"><a href="" class="item__link_modificate item__link_color">home</a></li>
                 <li class="navigate__item"><a href="" class="item__link_modificate">services</a></li>
                 <li class="navigate__item"><a href="" class="item__link_modificate">portfolio</a></li>
                 <li class="navigate__item"><a href="" class="item__link_modificate">contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    
 
+    <main class="main">
+    <!--TODO! БЛОК ARTICLE-OURSERVISE-->
+   <article class="article-ourServices">
+       <div class="text">
+           <h1 class="text_heading">Our Services</h1>
+           <p class="text_paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+       </div>
+       <div class="grid-container-services">
+           <div class="card">
+               <div class="card__img"><img class="img_size" src="./assets/icons/services-item-1.svg" alt="icon"></div>
+               <p class="card__text">Custom Design</p>
+               <p class="card__text-small">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+           </div>
+           <div class="card">
+               <div class="card__img"><img class="img_size" src="./assets/icons/services-item-2.svg" alt="icon"></div>
+               <p class="card__text">Inovative Ideas</p>
+               <p class="card__text-small">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+           </div>
+           <div class="card">
+               <div class="card__img"><img class="img_size" src="./assets/icons/services-item-3.svg" alt="icon"></div>
+               <p class="card__text">Love Is The Answer</p>
+               <p class="card__text-small">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+           </div>
+           <div class="card">
+               <div class="card__img"><img class="img_size" src="./assets/icons/services-item-4.svg" alt="icon"></div>
+               <p class="card__text">Responsive Layout</p>
+               <p class="card__text-small">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+           </div>
+           <div class="card">
+               <div class="card__img"><img class="img_size" src="./assets/icons/services-item-5.svg" alt="icon"></div>
+               <p class="card__text">24 / 7 Support</p>
+               <p class="card__text-small">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
+           </div>
+           <div class="card">
+               <div class="card__img"><img class="img_size" src="./assets/icons/services-item-6.svg" alt="icon"></div>
+               <p class="card__text">24 / 7 Support</p>
+               <p class="card__text-small">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
+           </div>
+       </div>
+   </article>
 
+   <!--TODO! БЛОК ARTICLE-PORTFOLIO-->
+  <article class="article-portfolio">
+      <div class="text">
+          <h1 class="text_heading">Portfolio</h1>
+          <p class="text_paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+          <div class="flex-container">
+              <button class="button button_color">All</button>
+              <button class="button button_width-medium" disabled>Web Design</button>
+              <button class="button button_width-large" disabled>Graphic Design</button>
+              <button class="button button_width-small" disabled>Artwork</button>
+          </div>
+      </div>
+      <div class="grid-container">
+          <div><img class="grid__image" src="./assets/images/portfolio-1.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-2.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-3.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-4.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-5.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-6.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-7.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-8.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-9.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-10.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-11.png" alt="picture"></div>
+          <div><img class="grid__image" src="./assets/images/portfolio-12.png" alt="picture"></div>
+      </div>
+  </article>
+</main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <!--TODO!--Блок Portfolio Grid-->
-    <div class="grid-container">
-        <img class="grid__image" src="./assets/images/portfolio-1.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-2.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-3.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-4.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-5.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-6.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-7.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-8.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-9.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-10.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-11.png" alt="picture">
-        <img class="grid__image" src="./assets/images/portfolio-12.png" alt="picture">
-    </div>
-
-    <!--TODO!--Блок Button-->
-    <button class="button button_color">Web Design</button>
-    <button class="button" disabled>Web Design</button>
-
-    <!--TODO!--Блок Footer-->
-    <div class="footer">
-        <div class="text text__footer">&#169; Developed 2024</div>
+<!--TODO!--Блок Footer-->
+<div class="footer">
+    <div class="text text__footer">&#169; Developed 2024</div>
         <div class="Contact">
             <a href="#"><img src="./assets/icons/ico-facebook.png" alt="facebook"></a>
             <a href="#"><img src="./assets/icons/ico-google-plus.png" alt="google"></a>
             <a href="#"><img src="./assets/icons/ico-twitter.png" alt="twitter"></a>
             <a href="#"><img src="./assets/icons/ico-linkedin.png" alt="linkedin"></a>
         </div>
-    </div>
+</div>
+    
+
+<!-- TODO!--Блок Button
+<button class="button button_color">Web Design</button>
+<button class="button button_yellow" disabled>Web Design</button> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+          
+      
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -102,5 +244,3 @@
        
 
     
-</body>
-</html>

@@ -1,18 +1,27 @@
  @import './reset';
  @import '../assets/font/font';
+ @import './mixin';
+
+ $color: #FFFFFF;
+ $colorText: #5A5A7F;
+
+
+
+
+
+
 
  // TODO! Блок Header
 .header {
     min-height: 65px;
     background: #000025;
-    color: white;
+    color: $color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .logo {
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 2.5rem;
+        @include font-styles(700, 2.5rem);
         &.logo_color-yellow {
             color: #EDFF7E;
         }
@@ -26,14 +35,13 @@
         }
         .item__link_modificate {
             text-decoration: none;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
+            color: $color;
+            @include font-styles(700, 1.2rem);
         }
         .item__link_color {
             color: #EDFF7E;
             &:hover {
-                color: white;
+                color: $color;
             }
         }
     }
@@ -41,9 +49,18 @@
         content: '\00b7'; 
         display: inline-block;
         margin-left: 45px; 
-        color: white;  
+        color: $color;  
     }
 }
+
+// TODO! article-ourServices
+.grid-container-services {
+    display: grid;
+    @include grid-layout(3, 300px, 2, 98px);
+    gap: 20px;
+    justify-content: center;
+}
+
 
             
 
@@ -51,75 +68,79 @@
 
 
 
-
-
-
-
-
-
-
-
-
-       
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // TODO! Блок Portfolio Grid
- @mixin grid-layout($columns, $column-width, $rows, $row-height) {
-    grid-template-columns: repeat($columns, $column-width);
-    grid-template-rows: repeat($rows, $row-height);
-  }
- .grid-container {
-    display: grid;
-    @include grid-layout(4, 220px, 3, 187px);
-    gap: 20px;
-    justify-content: center;
-    .grid__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+ // TODO! article-portfolio
+.article-portfolio {
+    background-color: #EDFF7E;
+    .text {
+        .flex-container {
+            display: flex;
+            column-gap: 16px;
+            .button_width-medium {
+                width: 81px;
+            }
+            .button_width-large {
+                width: 97px;
+            }
+            .button_width-small {
+                width: 60px;
+            }
+        }
     }
 }
+.grid-container {
+   display: grid;
+   @include grid-layout(4, 220px, 3, 187px);
+   gap: 20px;
+   justify-content: center;
+   .grid__image {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+}
+// TODO! блок ТЕКСТ
+.text {
+    .text_heading {
+        @include font-styles(900, 3rem);
+        color: #000025;
+        line-height: 3.6rem;
+    }
+    .text_paragraph {
+        @include font-styles(400, 1.8rem);
+        color: $colorText;
+        line-height: 3rem;
+    }
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //TODO!--Блок Button
 .button {
@@ -131,13 +152,14 @@
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.2rem;
-    background-color: white;
+    background-color: #EDFF7E;
     color: #5A5A7F;
     cursor: pointer;
 }
 .button_color {
     color: white;
     background-color: #7067CF;
+    width: 30px;
     &:hover {
         background-color: #8f89ce;
     }
@@ -145,6 +167,40 @@
         background-color: #aeabd2;
     }
 }
+
+
+// TODO!--Блок card
+.card {
+    width: 300px;
+    height: 98px;
+    position: relative;
+    .card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+    .card__text {
+        @include font-styles(900, 1.8rem);
+        line-height: 1.8rem;
+        color: $colorText;
+        padding-left: 77px;
+    }
+    .card__text-small {
+        @include font-styles(400, 1.2rem);
+        line-height: 2.2rem;
+        color: $colorText;
+        padding-left: 77px;
+        text-align: justify;
+    }
+}
+  
+  
+
+
+      
 
 // TODO!--Блок Footer
 .footer {
@@ -155,7 +211,7 @@
         font-weight: 900;
         font-size: 1.3rem;
         line-height: 1.8rem;
-        color: #5A5A7F;
+        color: $colorText;
     }
 }
 
@@ -180,24 +236,38 @@
 
 
 @media (max-width: 830px) {
-    // TODO! @media Блок Portfolio Grid
     .grid-container {
         @include grid-layout(3, 220px, 4, 187px);
         gap: 12px;
       }
-    }
-    @media (max-width: 450px) {
-        // TODO! Навигация
+      .grid-container-services {
+          @include grid-layout(2, 300px, 3, 98px);
+      }
+      }
+    
+
+
+      @media (max-width: 450px) {
         .navigate {
             display: none;
         }
-        // TODO! @media Блок Portfolio Grid
-      .grid-container {
-          @include grid-layout(2, 161px, 6, 161px);
-          gap: 13px;
-      }
-    }
+          .grid-container {
+              @include grid-layout(2, 161px, 6, 161px);
+              gap: 13px;
+          }
+          .grid-container-services {
+            @include grid-layout(1, 300px, 6, 98px);
+        }
+        }
+         
+       
+   
+        
+    
+
+
  
+
       
 
     
