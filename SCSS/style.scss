@@ -5,13 +5,7 @@
  $color: #FFFFFF;
  $colorText: #5A5A7F;
 
-
-
-
-
-
-
- // TODO! Блок Header
+ // TODO! БЛОК HEADER
 .header {
     min-height: 65px;
     background: #000025;
@@ -52,24 +46,24 @@
         color: $color;  
     }
 }
-
-// TODO! article-ourServices
+// TODO! БЛОК MAIN > ARTICLE-CARUSEL PICTURES
+.carouselPictures {
+    min-height: 80vh;
+    background: #7067CF;
+}
+// TODO! БЛОК MAIN > ARTICLE-OURSERVISE
+.article-ourServices {
+    min-height: 60vh;
+}
 .grid-container-services {
     display: grid;
     @include grid-layout(3, 300px, 2, 98px);
     gap: 20px;
     justify-content: center;
 }
-
-
-            
-
-       
-
-
-
- // TODO! article-portfolio
+// TODO! БЛОК MAIN > ARTICLE-PORTFOLIO
 .article-portfolio {
+    min-height: 105vh;
     background-color: #EDFF7E;
     .text {
         .flex-container {
@@ -98,17 +92,18 @@
        object-fit: cover;
    }
 }
-// TODO! блок ТЕКСТ
-.text {
-    .text_heading {
-        @include font-styles(900, 3rem);
-        color: #000025;
-        line-height: 3.6rem;
-    }
-    .text_paragraph {
-        @include font-styles(400, 1.8rem);
+// TODO!--БЛОК FOOTER
+.footer {
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #EDFF7E;
+    border-top: 1px solid #D4CBFF;
+    .text__footer {
+        font-weight: 900;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
         color: $colorText;
-        line-height: 3rem;
     }
 }
 
@@ -123,25 +118,25 @@
 
 
 
+            
+
+       
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// TODO! блок ТЕКСТ
+.text {
+    .text_heading {
+        @include font-styles(900, 3rem);
+        color: #000025;
+        line-height: 3.6rem;
+    }
+    .text_paragraph {
+        @include font-styles(400, 1.8rem);
+        color: $colorText;
+        line-height: 3rem;
+    }
+}
 //TODO!--Блок Button
 .button {
     width: 81px;
@@ -167,8 +162,6 @@
         background-color: #aeabd2;
     }
 }
-
-
 // TODO!--Блок card
 .card {
     width: 300px;
@@ -196,42 +189,8 @@
         text-align: justify;
     }
 }
-  
-  
 
-
-      
-
-// TODO!--Блок Footer
-.footer {
-    display: flex;
-    justify-content: space-between;
-
-    .text__footer {
-        font-weight: 900;
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-        color: $colorText;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
@@ -243,7 +202,17 @@
       .grid-container-services {
           @include grid-layout(2, 300px, 3, 98px);
       }
+      .carouselPictures {
+        min-height: 56vh;
       }
+      .article-ourServices {
+        height: 80vh;
+    }
+    .article-portfolio {
+        min-height: 130vh;
+      }
+    }
+        
     
 
 
@@ -258,7 +227,71 @@
           .grid-container-services {
             @include grid-layout(1, 300px, 6, 98px);
         }
+        .carouselPictures {
+            min-height: 36vh;
+          }
+          .article-ourServices {
+            height: 135vh;
         }
+          .article-portfolio {
+            min-height: 135vh;
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
          
        
    
