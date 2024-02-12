@@ -232,7 +232,7 @@
         gap: 12px;
       }
       .grid-container-services {
-          @include grid-layout(2, 300px, 3, 98px);
+          @include grid-layout(2, 300px, 3, 124px);
       }
       .carouselPictures {
         min-height: 56vh;
@@ -240,41 +240,32 @@
       .text {
         grid-template-columns: 681px;
       }
-    //   .article-ourServices {
-    //     height: 80vh;
-    // }
-    // .article-portfolio {
-    //     min-height: 130vh;
-    //   }
     }
+
+    @media (max-width: 450px) {
+      .navigate {
+          display: none;
+      }
+        .grid-container {
+            @include grid-layout(2, 161px, 6, 161px);
+            gap: 13px;
+        }
+        .grid-container-services {
+          @include grid-layout(1, 300px, 6, 124px);
+      }
+      .carouselPictures {
+          min-height: 36vh;
+        }
+        .text {
+          grid-template-columns: 333px;
+        }
+      }
+
         
     
 
 
-      @media (max-width: 450px) {
-        .navigate {
-            display: none;
-        }
-          .grid-container {
-              @include grid-layout(2, 161px, 6, 161px);
-              gap: 13px;
-          }
-          .grid-container-services {
-            @include grid-layout(1, 300px, 6, 124px);
-        }
-        .carouselPictures {
-            min-height: 36vh;
-          }
-          .text {
-            grid-template-columns: 333px;
-          }
-        //   .article-ourServices {
-        //     height: 135vh;
-        // }
-        //   .article-portfolio {
-        //     min-height: 135vh;
-        //   }
-        }
+
 
 
 
