@@ -87,6 +87,7 @@
    @include grid-layout(4, 220px, 3, 187px);
    gap: 20px;
    justify-content: center;
+   margin-bottom: 40px;
    .grid__image {
        width: 100%;
        height: 100%;
@@ -95,22 +96,36 @@
 }
 // TODO!--БЛОК FOOTER
 .footer {
-    // min-height: 65px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #EDFF7E;
-    border-top: 1px solid #D4CBFF;
-    .text__footer {
-        font-weight: 900;
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-        color: $colorText;
-    }
-    .contact {
-        display: flex;
-        // justify-content: space-evenly;
-    }
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ min-height: 65px;
+ background-color: #EDFF7E;
+ border-top: 2px solid #D4CBFF;
+ .contact {
+     display: flex;
+     gap: 10px;
+ }
+ .text__footer {
+     @include font-styles(900, 1.3rem);
+     line-height: 1.8rem;
+     color: $colorText;
+ }
 }
+
+             
+
+
+              
+    
+          
+    
+                
+  
+                
+    
+
+      
 
     
 
