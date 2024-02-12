@@ -4,6 +4,7 @@
 
  $color: #FFFFFF;
  $colorText: #5A5A7F;
+ $colorBackgraund: #EDFF7E;
 
  // TODO! БЛОК HEADER
 .header {
@@ -17,12 +18,12 @@
         text-transform: uppercase;
         @include font-styles(700, 2.5rem);
         &.logo_color-yellow {
-            color: #EDFF7E;
+            color: $colorBackgraund;
         }
     }
     .navigate__items {
         display: flex;
-        column-gap: 39px;
+        column-gap: 35px;
         list-style-type: none;
         .navigate__item {
             text-transform: uppercase;
@@ -33,7 +34,7 @@
             @include font-styles(700, 1.2rem);
         }
         .item__link_color {
-            color: #EDFF7E;
+            color: $colorBackgraund;
             &:hover {
                 color: $color;
             }
@@ -53,7 +54,7 @@
 }
 // TODO! БЛОК MAIN > ARTICLE-OURSERVISE
 .article-ourServices {
-    min-height: 64vh;
+    min-height: 65vh;
 }
 .grid-container-services {
     display: grid;
@@ -65,7 +66,7 @@
 .article-portfolio {
     display: grid;
     gap: 20px;
-    background-color: #EDFF7E;
+    background-color: $colorBackgraund;
     .text {
         .flex-container {
             display: flex;
@@ -100,7 +101,7 @@
  justify-content: space-around;
  align-items: center;
  min-height: 65px;
- background-color: #EDFF7E;
+ background-color: $colorBackgraund;
  border-top: 2px solid #D4CBFF;
  .contact {
      display: flex;
@@ -108,10 +109,10 @@
  }
  .text__footer {
      @include font-styles(900, 1.3rem);
-     line-height: 1.8rem;
      color: $colorText;
  }
 }
+    
 
              
 
@@ -162,28 +163,6 @@
         line-height: 3rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //TODO!--Блок Button
 .button {
     width: 81px;
@@ -191,17 +170,16 @@
     padding: 8px;
     border: 1px solid #7067CF;
     border-radius: 4px;
-    font-size: 1.1rem;
-    font-weight: 400;
+    @include font-styles(400, 1.1rem);
     line-height: 1.2rem;
-    background-color: #EDFF7E;
-    color: #5A5A7F;
+    background-color: $colorBackgraund;
+    color: $colorText;
     cursor: pointer;
 }
 .button_color {
     color: white;
     background-color: #7067CF;
-    width: 30px;
+   
     &:hover {
         background-color: #8f89ce;
     }
@@ -236,6 +214,31 @@
         text-align: justify;
     }
 }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
@@ -274,6 +277,10 @@
         .text {
           grid-template-columns: 333px;
         }
+        .footer {
+            min-height: 80px;
+        }
+      
       }
 
         
