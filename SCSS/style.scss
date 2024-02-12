@@ -53,7 +53,7 @@
 }
 // TODO! БЛОК MAIN > ARTICLE-OURSERVISE
 .article-ourServices {
-    min-height: 60vh;
+    min-height: 64vh;
 }
 .grid-container-services {
     display: grid;
@@ -63,7 +63,8 @@
 }
 // TODO! БЛОК MAIN > ARTICLE-PORTFOLIO
 .article-portfolio {
-    min-height: 105vh;
+    display: grid;
+    gap: 20px;
     background-color: #EDFF7E;
     .text {
         .flex-container {
@@ -94,7 +95,7 @@
 }
 // TODO!--БЛОК FOOTER
 .footer {
-    min-height: 65px;
+    // min-height: 65px;
     display: flex;
     justify-content: space-between;
     background-color: #EDFF7E;
@@ -104,6 +105,10 @@
         font-size: 1.3rem;
         line-height: 1.8rem;
         color: $colorText;
+    }
+    .contact {
+        display: flex;
+        // justify-content: space-evenly;
     }
 }
 
@@ -126,6 +131,11 @@
 
 // TODO! блок ТЕКСТ
 .text {
+    display: grid;
+    grid-template-columns: 941px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
     .text_heading {
         @include font-styles(900, 3rem);
         color: #000025;
@@ -137,6 +147,28 @@
         line-height: 3rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //TODO!--Блок Button
 .button {
     width: 81px;
@@ -205,12 +237,15 @@
       .carouselPictures {
         min-height: 56vh;
       }
-      .article-ourServices {
-        height: 80vh;
-    }
-    .article-portfolio {
-        min-height: 130vh;
+      .text {
+        grid-template-columns: 681px;
       }
+    //   .article-ourServices {
+    //     height: 80vh;
+    // }
+    // .article-portfolio {
+    //     min-height: 130vh;
+    //   }
     }
         
     
@@ -225,17 +260,20 @@
               gap: 13px;
           }
           .grid-container-services {
-            @include grid-layout(1, 300px, 6, 98px);
+            @include grid-layout(1, 300px, 6, 124px);
         }
         .carouselPictures {
             min-height: 36vh;
           }
-          .article-ourServices {
-            height: 135vh;
-        }
-          .article-portfolio {
-            min-height: 135vh;
+          .text {
+            grid-template-columns: 333px;
           }
+        //   .article-ourServices {
+        //     height: 135vh;
+        // }
+        //   .article-portfolio {
+        //     min-height: 135vh;
+        //   }
         }
 
 
