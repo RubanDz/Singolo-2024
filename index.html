@@ -7,10 +7,24 @@
     <title>Singolo</title>
 </head>
 <body>
-
     <!--TODO! БЛОК HEADER-->
     <header class="header">
-        <div class="logo">singolo<span class="logo logo_color-yellow">*</span></div>
+    <!--TODO МЕНЮ БУРГЕР-->
+    <div class="hamburger-menu">
+        <input type="checkbox" class="checkbox-toggle" id="checkbox-toggle">
+        <label class="menu__btn" for="checkbox-toggle">
+            <span></span>
+        </label>
+        <ul class="menu-container basic-menu">
+            <div class="logo-mobile">singolo <span class="logo_color">&#9733;</span></div>
+            <li><a class="menu-container__item menu-container__item_color" href="#">home</a></li>
+            <li><a class="menu-container__item" href="#">services</a></li>
+            <li><a class="menu-container__item" href="#">portfolio</a></li>
+            <li><a class="menu-container__item" href="#">about</a></li>
+            <li><a class="menu-container__item" href="#">contact</a></li>
+        </ul>
+    </div>
+    <div class="logo">singolo<span class="logo logo_color-yellow">*</span></div>
         <nav class="navigate">
             <ul class="navigate__items">
                 <li class="navigate__item"><a href="#" class="item__link_modificate item__link_color">home</a></li>

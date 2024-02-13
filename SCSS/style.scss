@@ -7,13 +7,24 @@
  $colorBackgraund: #EDFF7E;
 
  // TODO! БЛОК HEADER
+ // TODO МЕНЮ БУРГЕР
+/*СКРЫВАЕМ БУРГЕР МЕНЮ*/
+.hamburger-menu {
+    display: none;
+}
+
+
+
 .header {
     min-height: 65px;
+    width: 100vw;
     background: #000025;
     color: $color;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    z-index: 1;
     .logo {
         text-transform: uppercase;
         @include font-styles(700, 2.5rem);
@@ -72,7 +83,7 @@
             display: flex;
             column-gap: 16px;
             .button_width-medium {
-                width: 81px;
+                width: 85px;
             }
             .button_width-large {
                 width: 97px;
@@ -171,10 +182,11 @@
     border: 1px solid #7067CF;
     border-radius: 4px;
     @include font-styles(400, 1.1rem);
-    line-height: 1.2rem;
+    line-height: 0.9rem;
     background-color: $colorBackgraund;
     color: $colorText;
     cursor: pointer;
+   
 }
 .button_color {
     color: white;
@@ -280,9 +292,114 @@
         .footer {
             min-height: 80px;
         }
-      
-      }
+        // TODO! МЕНЮ БУРГЕР
+    /*ОТОБРАЖАЕМ МЕНЮ БУРГЕР*/
+    .hamburger-menu {
+        display: block;
+        .logo-mobile {
+           @include font-styles(700, 1.7rem);
+            margin-left: 50px;
+            text-transform: uppercase;
+            color: $color;
+            position: absolute;
+            top: 25px;
+            left: 15px;
+        }
+    }
+    .logo_color {
+        color: $colorBackgraund;
+        position: absolute;
+        top: -2px;
+    }
+    /*СКРЫВАЕМ ЧЕКБОХ*/
+.checkbox-toggle {
+    opacity: 0;
+}
+/*СТИЛИ ДЛЯ ГАМБУРГЕР МЕНЮ*/
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1;
+    & > span,
+    & > span::before,
+    & > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2.4px;
+      background-color: #616161;
+    }
+    & > span::before {
+      content: '';
+      top: -8px;
+    }
+    & > span::after {
+      content: '';
+      top: 8px;
+    }
+   }
+/* стили для меню, по умолчанию оно будет скрыто, открывается после установки галки на чекбоксе */
+.menu-container {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background: #7067CF;
+    &__item {
+      display: block;
+      padding: 27px 35px;
+      color: white;
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: start;
+   }
+}
+.menu-container__item_color {
+   color: $colorBackgraund;
+}
+.menu-container__item:hover {
+   background-color: #CFD8DC;
+}
+/* открытие/закрытие меню */
+#checkbox-toggle:checked ~ .menu__btn > span {
+    transform: rotate(90deg);
+ }
+ #checkbox-toggle:checked ~ .menu-container {
+    visibility: visible;
+    left: 0;
+ }
+ /* анимация для меню */
+ .menu__btn > span,
+ .menu__btn > span::before,
+ .menu__btn > span::after {
+    transition-duration: .25s;
+ }
+ .menu-container {
+    transition-duration: .5s;
+ }
+ .menu-container__item {
+    transition-duration: .5s;
+ }
+    }
+    
 
+
+        
+        
         
     
 
