@@ -333,7 +333,7 @@
       position: absolute;
       width: 100%;
       height: 2.4px;
-      background-color: #616161;
+      background-color: $color;
     }
     & > span::before {
       content: '';
