@@ -85,7 +85,6 @@
     justify-content: center;
     align-items:center;
     column-gap: 20px;
-   
     .carouselPictures__img {
         width: 100%;
         height: 100%;
@@ -93,6 +92,7 @@
        
     }
 }
+   
 
 
 
@@ -328,6 +328,9 @@
       }
       .carouselPictures {
         min-height: 100vh;
+        .carouselPictures__img {
+            width: 80%;
+        }
       }
       .text {
         grid-template-columns: 681px;
