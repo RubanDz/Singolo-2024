@@ -58,11 +58,72 @@
         color: $color;  
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // TODO! БЛОК MAIN > ARTICLE-CARUSEL PICTURES
 .carouselPictures {
-    min-height: 80vh;
+    min-height: 100vh;
     background: #7067CF;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+   
+    .carouselPictures__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // TODO! БЛОК MAIN > ARTICLE-OURSERVISE
 .article-ourServices {
     min-height: 65vh;
@@ -182,7 +243,7 @@
     border: 1px solid #7067CF;
     border-radius: 4px;
     @include font-styles(400, 1.1rem);
-    line-height: 0.9rem;
+    line-height: 0.8rem;
     background-color: $colorBackgraund;
     color: $colorText;
     cursor: pointer;
@@ -265,7 +326,7 @@
           @include grid-layout(2, 300px, 3, 124px);
       }
       .carouselPictures {
-        min-height: 56vh;
+        min-height: 100vh;
       }
       .text {
         grid-template-columns: 681px;
@@ -284,7 +345,7 @@
           @include grid-layout(1, 300px, 6, 124px);
       }
       .carouselPictures {
-          min-height: 36vh;
+          min-height: 70vh;
         }
         .text {
           grid-template-columns: 333px;
